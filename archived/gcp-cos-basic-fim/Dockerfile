@@ -3,7 +3,7 @@ FROM alpine:3.8
 
 # python3 shared with most images
 RUN apk add --no-cache \
-    python3 py3-pip \
+    python3 py3-pip cpulimit \
   && pip3 install --upgrade pip
 # Image specific layers under this line
 RUN apk add --no-cache fcron rsyslog bash findutils tzdata
